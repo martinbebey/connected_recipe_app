@@ -8,4 +8,4 @@ data class Category(
 )
 
 
-data class CategoriesResponse(val categoriesList: List<Category>)
+data class CategoriesResponse(val categories: List<Category>) //variable must be exact same name as the response header

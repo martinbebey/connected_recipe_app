@@ -20,7 +20,7 @@ class MainViewModel: ViewModel() {
             try {
                 val response = recipeService.getRecipeCategories()
                 _categoriesState.value = _categoriesState.value.copy(
-                    list = response.categoriesList,
+                    list = response.categories,
                     loading = false,
                     error = null
                 )
@@ -30,6 +30,8 @@ class MainViewModel: ViewModel() {
                     loading = false,
                     error = "Error fetching Categories ${exception.message}"
                 )
+
+                exception.printStackTrace()
             }
         }
     }
